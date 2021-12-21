@@ -1,18 +1,27 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    Good {{timeOfDay}}
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'Home',
-  components: {
-    HelloWorld
+  computed: {
+    timeOfDay: function () {
+      const now = new Date()
+      const hour = now.getHours()
+      let message = ''
+      if (hour < 12)
+        message = 'morning'
+      else if (hour >= 12 && hour < 17)
+        message = 'afternoon'
+      else
+        message = 'evening'
+      return message
+    }
   }
 }
 </script>
