@@ -1,13 +1,17 @@
 <template>
   <div id="appLayout">
-    <Navbar />
-    <div id="appLayoutMain">
-      <main>
-        <router-view/>  
-      </main>  
-      <Sidebar />
-    </div>  
-    <Player />
+    <div id="appStatic" class="grid grid-cols-6">
+      <Navbar />
+      <div id="appLayoutMain" class="col-span-5 grid grid-cols-4 gap-4">
+        <main class="col-span-3">
+          <router-view/>  
+        </main>  
+        <Sidebar />
+      </div>  
+    </div>
+    <div id="appSticky" class="fixed bottom-0 left-0">
+      <Player />
+    </div>
   </div>  
 </template>
 

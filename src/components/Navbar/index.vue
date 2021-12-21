@@ -1,5 +1,5 @@
 <template>
-  <div id="navbar">
+  <div id="navbar" class="flex-none bg-neutral-700">
     <ul>
       <li>Home</li>
       <li>Search</li>
