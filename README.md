@@ -1,5 +1,7 @@
 # vue-spotify
 
+A Spotify clone (as of Dec 2021) built from scratch.
+
 ## Project setup
 ```
 npm install
